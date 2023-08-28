@@ -22,16 +22,33 @@
 
 #Two pointer 
 
+# class Solution:
+#     def removeDuplicates(self, nums: List[int]) -> int:
+#         slow ,fast = 0,1
+#         while fast in range (len(nums)):
+#             if nums[slow] == nums[fast]:
+#                 fast +=1
+#             else :
+#                 nums[slow +1 ] = nums[fast]
+#                 slow +=1
+#                 fast +=1
+#         return slow +1
+
+
 class Solution:
-    def removeDuplicates(self, nums: List[int]) -> int:
-        slow ,fast = 0,1
-        while fast in range (len(nums)):
-            if nums[slow] == nums[fast]:
-                fast +=1
-            else :
-                nums[slow +1 ] = nums[fast]
-                slow +=1
-                fast +=1
-        return slow +1
+    def removeDuplicates(self,nums:List[int]) -> int:
+        j = 0
+        i = 1
+
+        for i in range (len(nums)):
+        #while i in range (len(nums)):
+            if nums[j] != nums[i]:
+                j+=1
+                nums[j] = nums[i]
+            #i+=1
+            
+        return j+1
+                
+
 
 
