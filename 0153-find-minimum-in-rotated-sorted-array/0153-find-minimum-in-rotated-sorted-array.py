@@ -2,7 +2,6 @@ class Solution:
     def findMin(self, nums: List[int]) -> int:
 
         start = 0
-
         end = len(nums)-1
 
         while start < end :
@@ -12,6 +11,7 @@ class Solution:
                 start = mid +1
             else:
                 end = mid
+
         return nums[start]
 
 
