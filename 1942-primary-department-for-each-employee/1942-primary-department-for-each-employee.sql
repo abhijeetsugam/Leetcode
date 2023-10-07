@@ -13,6 +13,5 @@ WHERE employee_id IN (
     HAVING COUNT(*) = 1
 )
 
-order by employee_id
 
 
