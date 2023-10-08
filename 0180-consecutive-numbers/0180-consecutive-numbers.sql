@@ -14,7 +14,7 @@
 
 with cte as (
 
-select num , lead(num,1) over () as num1, lead(num,2) over () as num2
+select num , lead(num,1) over (order by id) as num1, lead(num,2) over (order by id) as num2
 from logs
 
 )
