@@ -13,8 +13,21 @@
 
 
 with cte as (
-        select num , lead(num,1) over () as num1, lead(num,2) over () as num2
-        from logs
-            )
+    select num , lead(num,1) over() as num1, lead(num,2) over() as num2
+    from logs
+)
 
-select distinct num as ConsecutiveNums from cte where num1 = num2 and num2 = num
+select distinct num as consecutiveNums
+from cte
+where num1 = num2 and num = num2
+
+
+
+
+
+
+
+
+
+
+
